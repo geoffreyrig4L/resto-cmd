@@ -1,7 +1,25 @@
-L'objectif de ce projet était de se former sur Redux. Il prend la forme d'une borne de fast food pour effectuer une commande. 
+L'objectif de ce projet était de se former sur Redux. Il prend la forme d'une borne de fast food pour effectuer une commande.
 
-Ce projet a été réalisé en suivant le cours : 
+Ce projet a été réalisé en suivant le cours :
 https://openclassrooms.com/fr/courses/8228131-gerez-votre-application-react-avec-redux-et-redux-toolkit
+
+Chaque entité démontre une façon différentes d'utiliser Redux. L'entité Note est celle qui profite le plus de la puissance de Redux.
+
+L'entité Note inclut les concepts suivants :
+
+- createEntityAdapter
+- slice
+
+L'entité Cart inclut les concepts suivants :
+
+- slice
+
+L'entity Owner inclut les concepts suivants :
+
+- createAction (actions.js)
+- reducer manuel (inclus dans store.js)
+
+! Si il y a besoin de reproduire une architecture Redux, il faut se calquer sur l'entité Note.
 
 # Getting Started with Create React App
 

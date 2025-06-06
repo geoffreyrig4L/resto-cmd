@@ -5,6 +5,7 @@ import {
 } from "@reduxjs/toolkit";
 import { updateFirstName } from "./actions";
 import cartSliceReducer from "../features/cart/cartSlice";
+import notesSliceReducer from "../features/notes/notesSlice";
 
 let state = {
   value: null,
@@ -22,5 +23,9 @@ const reducer = createReducer(state, (builder) => {
 
 export const store = configureStore({
   preloadedState: state,
-  reducer: combineReducers({ cart: cartSliceReducer, owner: reducer }),
+  reducer: combineReducers({
+    cart: cartSliceReducer,
+    owner: reducer,
+    notes: notesSliceReducer,
+  }),
 });

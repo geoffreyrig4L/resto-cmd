@@ -4,6 +4,7 @@ import Owner from "../features/owner/Owner";
 import Total from "../features/total/Total";
 import Menu from "../features/menu/Menu";
 import Voucher from "../features/voucher/Voucher";
+import Notes from "../features/notes/Notes";
 import "./App.css";
 import { store } from "./store";
 
@@ -18,6 +19,7 @@ function App() {
           <h1>Mon menu</h1>
           <Voucher />
           <Cart />
+          <Notes />
           <Total />
         </div>
       </div>

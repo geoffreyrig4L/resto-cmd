@@ -22,6 +22,51 @@ body {
   gap: 32px 0px;
 }
 
+#my-notes {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 16px;
+}
+
+.deleteNote {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.deleteNote:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+  font-bold: 600;
+  color: white;
+}
+
+.note {
+  background-color: white;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 5px;
+  width: calc(33.333% - 32px);
+  position: relative;
+}
+
+#note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0px;
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.12);
+  padding: 16px;
+  margin: 16px 0px;
+  border-radius: 5px;
+}
+
 .MenuContainer {
   display: flex;
   flex-direction: column;
@@ -30,6 +75,9 @@ body {
 }
 
 .cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0px;
   background-color: rgba(255, 255, 255, 0.128);
   padding: 2rem 4rem;
   border-radius: 5px;
@@ -84,6 +132,12 @@ body {
   gap: 8px;
   padding: 16px;
   color: white;
+}
+
+.noteHeader {
+  font-size: 12px;
+  font-style: italic;
+  color: #888;
 }
 
 .CartNavBar button {
