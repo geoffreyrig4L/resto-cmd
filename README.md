@@ -13,13 +13,14 @@ L'entité Note inclut les concepts suivants :
 L'entité Cart inclut les concepts suivants :
 
 - slice
+- thunk (asynchronicité)
 
 L'entity Owner inclut les concepts suivants :
 
 - createAction (actions.js)
 - reducer manuel (inclus dans store.js)
 
-! Si il y a besoin de reproduire une architecture Redux, il faut se calquer sur l'entité Note.
+! Si il y a besoin de reproduire une architecture Redux, il faut se calquer sur l'entité Note (sans oublier l'async dans Cart)
 
 # Getting Started with Create React App
 

@@ -8,8 +8,6 @@ const Notes = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log(event.target.note.value);
-
     dispatch(
       addNote({ id: crypto.randomUUID(), content: event.target.note.value })
     );

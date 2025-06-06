@@ -8,7 +8,13 @@ const Voucher = () => {
   return (
     available && (
       <button
-        style={{ margin: "20px 0px" }}
+        style={{
+          margin: "20px 0px",
+          width: "22%",
+          right: "5%",
+          top: "20px",
+          position: "absolute",
+        }}
         onClick={() => dispatch(applyVoucher({ price: 8.99 }))}
       >
         Appliquer une réduction

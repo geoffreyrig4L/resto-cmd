@@ -12,12 +12,9 @@ let state = {
   cart: [],
 };
 
-const reducer = createReducer(state, (builder) => {
+const ownerReducer = createReducer(state, (builder) => {
   builder.addCase(updateFirstName, (state, action) => {
-    state.owner = {
-      ...state.owner,
-      firstName: action.payload.firstName,
-    };
+    state.firstName = action.payload.firstName;
   });
 });
 
@@ -25,7 +22,8 @@ export const store = configureStore({
   preloadedState: state,
   reducer: combineReducers({
     cart: cartSliceReducer,
-    owner: reducer,
+    owner: ownerReducer,
     notes: notesSliceReducer,
   }),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
 });

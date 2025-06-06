@@ -19,8 +19,8 @@ function App() {
           <h1>Mon menu</h1>
           <Voucher />
           <Cart />
-          <Notes />
           <Total />
+          <Notes />
         </div>
       </div>
     </Provider>

@@ -10,7 +10,9 @@ export const getTotalOrder = (state) =>
 export const isVoucherAvailable = (state) =>
   getProductList(state).find((product) => product.title === "Super Crémeux");
 
-export const getOwner = (state) => state?.owner;
+export const getOwner = (state) => {
+  return state?.owner;
+};
 
 export const getQuantityProductPerName = (name) => (state) =>
   getProductList(state).filter((product) => product.title === name).length;
