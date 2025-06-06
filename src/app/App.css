@@ -1,0 +1,236 @@
+:root {
+  --PRIMARY: #282c34;
+  --SECONDARY: #fb7061;
+}
+
+body {
+  font-size: 1em;
+  min-height: 100vh;
+  background: rgb(255, 153, 51);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 153, 51, 1) 39%,
+    rgba(255, 66, 27, 1) 89%
+  );
+}
+
+.App {
+  padding: 12vh 12vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px 0px;
+}
+
+.MenuContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px 0;
+}
+
+.cart-container {
+  background-color: rgba(255, 255, 255, 0.128);
+  padding: 2rem 4rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+}
+
+#form-owner {
+  display: flex;
+  gap: 16px;
+  box-shadow: inset 0 0 5px #ccc;
+  padding: 16px;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 200px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.ProductCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+  background-color: rgba(255, 255, 255, 0.128);
+  font-weight: 800;
+  font-size: 24pt;
+  line-height: 32px;
+  cursor: pointer;
+}
+
+.ProductCard img {
+  padding: 20px;
+}
+
+.CartNavBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 8px;
+  padding: 16px;
+  color: white;
+}
+
+.CartNavBar button {
+  width: 100%;
+}
+
+.ProductCard:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.ProductUnavailable {
+  position: absolute;
+  background-color: red;
+  color: white;
+  padding: 8px;
+  transform: rotate(-25deg);
+  bottom: 64px;
+}
+
+.Menu {
+  width: 80%;
+  display: flex;
+  min-height: 10vh;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.Selection {
+  width: 100%;
+  display: flex;
+  padding: 32px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.096);
+  color: white;
+}
+
+h1 {
+  color: rgb(255, 58, 117);
+  margin: 0;
+}
+
+.owner {
+  word-break: break-word !important;
+}
+
+.titleProduct {
+  font-size: 22pt;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.SelectedProduct {
+  display: flex;
+  flex-direction: row;
+  gap: 0px 120px;
+  font-size: 18pt;
+  font-weight: 600;
+  text-align: left;
+  padding: 8px;
+}
+
+.SelectedProduct::before {
+  content: "✅ ";
+}
+
+#myCart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 32px;
+}
+
+.TotalCommand {
+  width: 100%;
+  font-weight: 800;
+  font-size: 32pt;
+  color: white;
+}
+
+.Voucher {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+}
+
+.Voucher button {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: var(--SECONDARY);
+  color: white;
+  cursor: pointer;
+  font-weight: 800;
+}
+.OwnerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px;
+  box-shadow: 0 0 5px #ccc;
+  margin-bottom: 64px;
+  color: #282c34;
+  background-color: rgba(255, 255, 255, 0.346);
+}
+
+.OwnerForm button {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #282c34;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.OwnerForm label {
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.OwnerForm input {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: 32px;
+}
+
+.FidelityPoints {
+  font-size: 14pt;
+  font-weight: 600;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #282c34;
+  padding: 16px;
+  color: white;
+}
