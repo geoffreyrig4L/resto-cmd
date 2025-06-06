@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { ProductCard } from "../../common/components/ProductCard";
 import * as ProductList from "../../common/models";
-import { addProduct } from "../../app/actions";
+import { addProduct } from "../cart/cartSlice";
 
 const Menu = () => {
   const dispatch = useDispatch();

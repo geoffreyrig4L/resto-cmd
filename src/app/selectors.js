@@ -1,6 +1,6 @@
 import * as ProductList from "../common/models";
 
-export const getProductList = (state) => state?.list;
+export const getProductList = (state) => state?.cart;
 
 export const getTotalOrder = (state) =>
   getProductList(state)

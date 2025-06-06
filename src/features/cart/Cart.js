@@ -1,6 +1,6 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getListWithQuantityProductPerName } from "../../app/selectors";
-import { removeProduct } from "../../app/actions";
+import { removeProduct } from "./cartSlice";
 
 const Cart = () => {
   const list = useSelector(getListWithQuantityProductPerName);

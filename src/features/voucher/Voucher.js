@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { isVoucherAvailable } from "../../app/selectors";
-import { applyVoucher } from "../../app/actions";
+import { applyVoucher } from "../cart/cartSlice";
 
 const Voucher = () => {
   const available = useSelector(isVoucherAvailable);
