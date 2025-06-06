@@ -1,3 +1,8 @@
+L'objectif de ce projet était de se former sur Redux. Il prend la forme d'une borne de fast food pour effectuer une commande. 
+
+Ce projet a été réalisé en suivant le cours : 
+https://openclassrooms.com/fr/courses/8228131-gerez-votre-application-react-avec-redux-et-redux-toolkit
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
