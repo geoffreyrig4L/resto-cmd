@@ -3,9 +3,10 @@ import {
   configureStore,
   createReducer,
 } from "@reduxjs/toolkit";
-import { updateFirstName } from "./actions";
+import { thunk } from "redux-thunk";
 import cartSliceReducer from "../features/cart/cartSlice";
 import notesSliceReducer from "../features/notes/notesSlice";
+import { updateFirstName } from "./actions";
 
 let state = {
   value: null,
@@ -25,5 +26,11 @@ export const store = configureStore({
     owner: ownerReducer,
     notes: notesSliceReducer,
   }),
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+  middleware: (getDefaultMiddleware) =>
+    // getDefaultMiddleware({
+    //   thunk: {
+    //     extraArgument: myCustomApiService,
+    //   },
+    // }),
+    getDefaultMiddleware(thunk),
 });

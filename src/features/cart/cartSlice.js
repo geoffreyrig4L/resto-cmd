@@ -1,7 +1,29 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { getListWithQuantityProductPerName } from "../../app/selectors";
 import * as ProductList from "../../common/models";
+
+export const resetOrderThunk = createAsyncThunk(
+  "cart/resetOrderThunk",
+  async (product, thunkApi) => {
+    console.log();
+
+    thunkApi.dispatch(cartSlice.actions.removeAllProducts());
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (window.confirm("Etes-vous encore là ?")) {
+          resolve();
+        } else {
+          reject();
+        }
+        // }, 120000);
+      }, 10000);
+    });
+  }
+);
+
 export const addProductThunk = createAsyncThunk(
+  // Le thunkApi  nous donne accès à plusieurs choses : le dispatch  et le getState  du store
+
   "cart/addProductThunk",
   async (product, thunkApi) => {
     thunkApi.dispatch(cartSlice.actions.addProduct(product));
@@ -46,6 +68,9 @@ const cartSlice = createSlice({
         }
       });
     },
+    removeAllProducts(state) {
+      state = [];
+    },
     removeProduct(state, action) {
       const newListWithQte = state.reduce((acc, product) => {
         const productQte = state.filter(
@@ -73,6 +98,12 @@ const cartSlice = createSlice({
     });
     builder.addCase(addProductThunk.rejected, (state) => {
       return [...state];
+    });
+    builder.addCase(resetOrderThunk.fulfilled, (state) => {
+      return [...state];
+    });
+    builder.addCase(resetOrderThunk.rejected, () => {
+      return [];
     });
   },
 });

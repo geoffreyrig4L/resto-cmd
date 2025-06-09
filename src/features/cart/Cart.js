@@ -1,10 +1,15 @@
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getListWithQuantityProductPerName } from "../../app/selectors";
-import { removeProduct } from "./cartSlice";
+import { removeProduct, resetOrderThunk } from "./cartSlice";
 
 const Cart = () => {
   const list = useSelector(getListWithQuantityProductPerName);
   const dispacth = useDispatch();
+
+  useEffect(() => {
+    dispacth(resetOrderThunk());
+  }, []);
 
   const filteredList = list.filter((product) => product.quantity !== 0);
   return (
