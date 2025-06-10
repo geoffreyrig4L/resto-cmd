@@ -5,14 +5,10 @@ const IMAGES = {
   "Poulet Croquant": "images/PouletCroquant.svg",
 };
 
-export const ProductCard = ({ product }) => (
+export const ProductCard = ({ product, unavailable }) => (
   <div className="ProductCard">
-    <img
-      width={100}
-      height={100}
-      src={IMAGES[product.title]}
-      alt={product.title}
-    />
+    <img src={IMAGES[product.title]} alt={product.title} />
     {product.title}
+    {unavailable && <span className="ProductUnavailable">Indisponible</span>}
   </div>
 );

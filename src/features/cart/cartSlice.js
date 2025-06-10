@@ -15,8 +15,7 @@ export const resetOrderThunk = createAsyncThunk(
         } else {
           reject();
         }
-        // }, 120000);
-      }, 10000);
+      }, 120000);
     });
   }
 );

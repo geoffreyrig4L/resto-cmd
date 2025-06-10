@@ -5,6 +5,7 @@ import Total from "../features/total/Total";
 import Menu from "../features/menu/Menu";
 import Voucher from "../features/voucher/Voucher";
 import Notes from "../features/notes/Notes";
+import Fidelity from "../features/fidelity/Fidelity";
 import "./App.css";
 import { store } from "./store";
 
@@ -14,7 +15,7 @@ function App() {
       <div className="App">
         <Owner />
         <Menu />
-
+        <Fidelity />
         <div className="cart-container">
           <h1>Mon menu</h1>
           <Voucher />

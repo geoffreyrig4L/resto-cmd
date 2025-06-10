@@ -26,3 +26,6 @@ export const getListWithQuantityProductPerName = (state) => {
         ?.price || product.price,
   }));
 };
+
+export const getUnavailableProducts = (state) =>
+  state?.menu?.unavailableProducts || [];

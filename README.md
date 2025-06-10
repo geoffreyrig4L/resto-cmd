@@ -15,10 +15,19 @@ L'entité Cart inclut les concepts suivants :
 - slice
 - thunk (asynchronicité)
 
-L'entity Owner inclut les concepts suivants :
+L'entité Owner inclut les concepts suivants :
 
 - createAction (actions.js)
 - reducer manuel (inclus dans store.js)
+
+L entité Menu inclut les concepts suivants :
+
+- thunk avec appel api
+- slice
+
+L entité Fidelity inclut les concepts suivants :
+
+- createApi
 
 ! Si il y a besoin de reproduire une architecture Redux, il faut se calquer sur l'entité Note (sans oublier l'async dans Cart)
 

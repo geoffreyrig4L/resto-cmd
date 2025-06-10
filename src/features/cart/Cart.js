@@ -5,6 +5,7 @@ import { removeProduct, resetOrderThunk } from "./cartSlice";
 
 const Cart = () => {
   const list = useSelector(getListWithQuantityProductPerName);
+
   const dispacth = useDispatch();
 
   useEffect(() => {

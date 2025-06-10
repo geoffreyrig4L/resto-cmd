@@ -6,7 +6,9 @@ import {
 import { thunk } from "redux-thunk";
 import cartSliceReducer from "../features/cart/cartSlice";
 import notesSliceReducer from "../features/notes/notesSlice";
+import menuSliceReducer from "../features/menu/menuSlice";
 import { updateFirstName } from "./actions";
+import { api } from "../services/api.service";
 
 let state = {
   value: null,
@@ -25,12 +27,9 @@ export const store = configureStore({
     cart: cartSliceReducer,
     owner: ownerReducer,
     notes: notesSliceReducer,
+    menu: menuSliceReducer,
+    [api.reducerPath]: api.reducer,
   }),
   middleware: (getDefaultMiddleware) =>
-    // getDefaultMiddleware({
-    //   thunk: {
-    //     extraArgument: myCustomApiService,
-    //   },
-    // }),
-    getDefaultMiddleware(thunk),
+    getDefaultMiddleware(thunk).concat(api.middleware),
 });
